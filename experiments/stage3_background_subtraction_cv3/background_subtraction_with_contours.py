@@ -3,7 +3,7 @@ import imutils
 import numpy as np
 import os
 
-for i in range(1,51):
+for i in range(1,2):
     cap = cv2.VideoCapture('../../data_input/'+str(i)+'.avi')
 
     fgbg = cv2.bgsegm.createBackgroundSubtractorMOG()
@@ -27,7 +27,7 @@ for i in range(1,51):
         if(fgmask is not None):
         #cv2.imshow('frame',fgmask)
 
-        # removing noise (salt and pepper) by 70% 
+        # removing noise (salt and pepper) by 70%
             blur = cv2.medianBlur(fgmask,7)
 
             #filling the boundaries detected to find objects
@@ -35,7 +35,7 @@ for i in range(1,51):
 
             #cv2.imshow('closing',closing)
 
-            #finding contours: closed shapes 
+            #finding contours: closed shapes
             _, contours, hierarchy = cv2.findContours(closing, cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 
             for cnt in contours:
@@ -55,12 +55,13 @@ for i in range(1,51):
 
                 #get the image inside bounded rectangle
                 people = frame[y-h:y + h*2, x-w:x + w*2]
-                if(people.size>0): 
+                if(people.size>0):
                     cv2.imshow('img',people)
                     noOfFrames += 1
-                    cv2.imwrite(newpath+"/"+str(noOfFrames)+".jpg",people)
+                    cv2.waitKey(500)
+                    #cv2.imwrite(newpath+"/"+str(noOfFrames)+".jpg",people)
 
-            
+
 
 
 
