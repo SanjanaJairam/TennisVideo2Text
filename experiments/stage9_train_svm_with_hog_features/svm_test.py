@@ -8,7 +8,7 @@ model.load('svm_data.dat')
 model.predict(features)
 '''
 #img = cv2.imread('../../data_output/people/tagged/42/positive/11.jpg')
-img = cv2.imread('../../data_output/people/tagged/45/negative/2.jpg')
+img = cv2.imread('../../data_output/people/tagged/42/positive/8.jpg')
 #img = cv2.imread('../../data_output/tennis1.png')
 #cv2.imshow("before_resize", img)
 resize = cv2.resize(img,(64,128))
