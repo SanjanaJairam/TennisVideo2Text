@@ -7,9 +7,9 @@ from skimage import feature
 from sklearn import svm
 
 samples = []
-labels = []    
+labels = []
 count= 0
-for i in range(1,51):
+for i in range(1,41):
     positivePath = "../../data_output/people/tagged/"+str(i)+"/positive/"
     negativePath = "../../data_output/people/tagged/"+str(i)+"/negative/"
 
@@ -24,7 +24,7 @@ for i in range(1,51):
 		    cells_per_block=(2, 2), block_norm ='L2-Hys' ,transform_sqrt=True)
         samples.append(features)
         labels.append(1)
-    
+
 
 # '''
 # Get negative samples
@@ -50,10 +50,9 @@ labels = np.array(labels)
 rand = np.random.RandomState(321)
 shuffle = rand.permutation(len(samples))
 samples = samples[shuffle]
-labels = labels[shuffle]    
+labels = labels[shuffle]
 
 clf = svm.SVC()
-clf.fit(samples, labels)  
-with open('svm.pickle','wb') as f:
+clf.fit(samples, labels)
+with open('svm40.pickle','wb') as f:
     pickle.dump(clf, f)
-
