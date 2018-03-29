@@ -50,10 +50,10 @@ for i in range(1,2):
 
 
                 #draw the bounding rectangle
-                #cv2.rectangle(frame,(x-w,y-h),(x+w*2,y+h*2),(0,255,0),2)
-                cv2.imshow('frame',frame)
+                # cv2.rectangle(frame,(x-w,y-h),(x+w*2,y+h*2),(0,255,0),2)
+                # cv2.imshow('frame',frame)
 
-                #get the image inside bounded rectangle
+                # get the image inside bounded rectangle
                 people = frame[y-h:y + h*2, x-w:x + w*2]
                 if(people.size>0):
                     cv2.imshow('img',people)
