@@ -3,14 +3,14 @@ import imutils
 import numpy as np
 import os
 
-for i in range(1,2):
+for i in range(1,51):
     cap = cv2.VideoCapture('../../data_input/'+str(i)+'.avi')
 
     fgbg = cv2.bgsegm.createBackgroundSubtractorMOG()
 
     noOfFrames = 0
 
-    newpath = "../../data_output/people/"+str(i)
+    newpath = "../../data_output/people_new/"+str(i)
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
@@ -28,7 +28,7 @@ for i in range(1,2):
         #cv2.imshow('frame',fgmask)
 
         # removing noise (salt and pepper) by 70%
-            blur = cv2.medianBlur(fgmask,7)
+            blur = cv2.medianBlur(fgmask,3)
 
             #filling the boundaries detected to find objects
             closing = cv2.morphologyEx(blur, cv2.MORPH_CLOSE, kernel, iterations=4)
