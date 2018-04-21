@@ -2,3 +2,8 @@
 data_input
 data_output
 *.pickle
+features
+generated_features
+histogram_files
+pickle_files
+*.csv
