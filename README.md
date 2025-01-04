@@ -42,7 +42,6 @@ This project consists of a modular set of experiments designed to process and an
 
 ```plaintext
 TennisVideo2Text/
-├── .git/                          # Git tracking directory
 ├── experiments/                   # Directory for all experimental stages
 │   ├── stage1_court_detection/    # Detect the tennis court in video frames
 │   ├── stage2_player_detection/   # Detect players in the video
@@ -65,7 +64,6 @@ TennisVideo2Text/
 ├── histogram_files/               # Stores histogram data for analysis
 │   ├── 1/                         # Folder for Diving histograms
 │   ├── 2/                         # Folder for Walking histograms
-├── .DS_Store                      # macOS metadata file (can be ignored)
 └── README.md                      # Project documentation
 ```
 
