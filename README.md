@@ -167,4 +167,4 @@ Contributions are welcome! You can contribute by:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/SanjanaJairam/TennisVideo2Text/blob/master/LICENSE).
