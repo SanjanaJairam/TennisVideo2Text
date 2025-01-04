@@ -79,7 +79,6 @@ TennisVideo2Text/
   - `opencv-python`: For video and image processing
   - `matplotlib`: For visualization
   - `scikit-learn`: For machine learning experiments
-  - `tensorflow` or `pytorch`: For advanced modeling (if applicable)
 
 Install all dependencies using:
 ```bash
